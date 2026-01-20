@@ -1174,8 +1174,19 @@ img {
     background: linear-gradient(135deg, rgba(205, 127, 50, 0.2), rgba(205, 127, 50, 0.05));
 }
 
+.standing-4,
+.standing-5,
+.standing-6,
+.standing-7,
+.standing-8 {
+    background: rgba(255, 255, 255, 0.03);
+}
+
 .standing-place {
     font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--secondary);
 }
 
 .standing-player {
