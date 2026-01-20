@@ -103,8 +103,8 @@
             <ul class="nav-menu">
                 <li><a href="#over-ons" class="nav-link active" data-i18n="nav.about">Over Ons</a></li>
                 <li><a href="#events" class="nav-link" data-i18n="nav.events">Events</a></li>
-                <li><a href="#links" class="nav-link" data-i18n="nav.links">Links</a></li>
                 <li><a href="#locatie" class="nav-link" data-i18n="nav.location">Locatie</a></li>
+                <li><a href="#links" class="nav-link" data-i18n="nav.links">Links</a></li>
                 <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="lang-toggle-pill" id="langToggle">
@@ -213,6 +213,59 @@
         </div>
     </section>
 
+    <!-- Location Section -->
+    <section id="locatie" class="section location-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="location.title">Locatie</h2>
+                <div class="ink-divider">
+                    <img src="assets/ink-icons/COLOR_AMBER_RGB.png" alt="Amber" class="ink-icon">
+                </div>
+            </div>
+
+            <div class="location-grid-double">
+                <div class="store-card play-location">
+                    <div class="location-badge" data-i18n="location.play.badge">🎴 Speellocatie</div>
+                    <h3>🏛️ Denksportcentrum Amersfoort</h3>
+                    <p class="store-description" data-i18n="location.play.description">Hier komen we elke donderdag samen om Disney Lorcana te spelen!</p>
+                    <div class="store-details">
+                        <p><strong data-i18n="location.address">📍 Adres:</strong><br>Nijverheidsweg-Noord 76C<br>3812 PM Amersfoort<br><em>De Isselt</em></p>
+                        <p><strong data-i18n="location.play.time">🕐 Lorcana Avond:</strong><br><span data-i18n="location.play.schedule">Elke donderdag vanaf 19:30</span></p>
+                        <p><strong data-i18n="location.play.parking">🅿️ Parkeren:</strong><br><span data-i18n="location.play.parkingInfo">Gratis parkeren bij de locatie</span></p>
+                    </div>
+                    <a href="https://maps.google.com/?q=Nijverheidsweg-Noord+76C+Amersfoort" target="_blank" class="btn btn-primary" data-i18n="location.directions">
+                        📍 Route plannen
+                    </a>
+                </div>
+                
+                <div class="store-card shop-location">
+                    <div class="location-badge" data-i18n="location.shop.badge">🛒 Winkel</div>
+                    <h3>🏪 Spellenpoort</h3>
+                    <p class="store-description" data-i18n="location.shop.description">Voor al je Disney Lorcana producten en kaarten!</p>
+                    <div class="store-details">
+                        <p><strong data-i18n="location.address">📍 Adres:</strong><br>Scherbierstraat 4<br>3811 JP Amersfoort</p>
+                        <p><strong data-i18n="location.shop.website">🌐 Website:</strong><br><a href="https://www.spellenpoort.com/" target="_blank">spellenpoort.com</a></p>
+                    </div>
+                    <a href="https://maps.google.com/?q=Scherbierstraat+4+Amersfoort" target="_blank" class="btn btn-outline" data-i18n="location.directions">
+                        📍 Route plannen
+                    </a>
+                </div>
+            </div>
+            
+            <div class="location-map">
+                <h4 style="text-align: center; color: var(--secondary); margin-bottom: 1rem;">📍 Speellocatie - Denksportcentrum</h4>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.5!2d5.3650!3d52.1680!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6441c8a8b6d1f%3A0x8b5b8b8b8b8b8b8b!2sNijverheidsweg-Noord%2076C%2C%203812%20PM%20Amersfoort!5e0!3m2!1snl!2snl!4v1234567890"
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Useful Links Section -->
     <section id="links" class="section links-section">
         <div class="container">
@@ -273,59 +326,6 @@
                     <p data-i18n="links.discord">De officiële Disney Lorcana Discord server. Niet geaffilieerd met Lorcamersfoort.</p>
                     <span class="link-url">discord.gg/disneylorcana</span>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section id="locatie" class="section location-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="location.title">Locatie</h2>
-                <div class="ink-divider">
-                    <img src="assets/ink-icons/COLOR_AMBER_RGB.png" alt="Amber" class="ink-icon">
-                </div>
-            </div>
-
-            <div class="location-grid-double">
-                <div class="store-card play-location">
-                    <div class="location-badge" data-i18n="location.play.badge">🎴 Speellocatie</div>
-                    <h3>🏛️ Denksportcentrum Amersfoort</h3>
-                    <p class="store-description" data-i18n="location.play.description">Hier komen we elke donderdag samen om Disney Lorcana te spelen!</p>
-                    <div class="store-details">
-                        <p><strong data-i18n="location.address">📍 Adres:</strong><br>Nijverheidsweg-Noord 76C<br>3812 PM Amersfoort<br><em>De Isselt</em></p>
-                        <p><strong data-i18n="location.play.time">🕐 Lorcana Avond:</strong><br><span data-i18n="location.play.schedule">Elke donderdag vanaf 19:30</span></p>
-                        <p><strong data-i18n="location.play.parking">🅿️ Parkeren:</strong><br><span data-i18n="location.play.parkingInfo">Gratis parkeren bij de locatie</span></p>
-                    </div>
-                    <a href="https://maps.google.com/?q=Nijverheidsweg-Noord+76C+Amersfoort" target="_blank" class="btn btn-primary" data-i18n="location.directions">
-                        📍 Route plannen
-                    </a>
-                </div>
-                
-                <div class="store-card shop-location">
-                    <div class="location-badge" data-i18n="location.shop.badge">🛒 Winkel</div>
-                    <h3>🏪 Spellenpoort</h3>
-                    <p class="store-description" data-i18n="location.shop.description">Voor al je Disney Lorcana producten en kaarten!</p>
-                    <div class="store-details">
-                        <p><strong data-i18n="location.address">📍 Adres:</strong><br>Scherbierstraat 4<br>3811 JP Amersfoort</p>
-                        <p><strong data-i18n="location.shop.website">🌐 Website:</strong><br><a href="https://www.spellenpoort.com/" target="_blank">spellenpoort.com</a></p>
-                    </div>
-                    <a href="https://maps.google.com/?q=Scherbierstraat+4+Amersfoort" target="_blank" class="btn btn-outline" data-i18n="location.directions">
-                        📍 Route plannen
-                    </a>
-                </div>
-            </div>
-            
-            <div class="location-map">
-                <h4 style="text-align: center; color: var(--secondary); margin-bottom: 1rem;">📍 Speellocatie - Denksportcentrum</h4>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.5!2d5.3650!3d52.1680!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6441c8a8b6d1f%3A0x8b5b8b8b8b8b8b8b!2sNijverheidsweg-Noord%2076C%2C%203812%20PM%20Amersfoort!5e0!3m2!1snl!2snl!4v1234567890"
-                    width="100%" 
-                    height="350" 
-                    style="border:0; border-radius: 12px;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
             </div>
         </div>
     </section>
