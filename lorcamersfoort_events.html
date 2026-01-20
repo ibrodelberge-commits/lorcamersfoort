@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .lorcamersfoort-events {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .event-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .event-title {
+    # Filter out past events
+    print(f"
+🕐 Filtering past events...")
+    future_events = filter_future_events(events)
+    
+    # Sort by date (soonest first)
+    future_events = sort_events_by_date(future_events)
+    
+    print(f"
+📋 {len(future_events)} upcoming events:
+")
+    for event in future_events:
+        print(format_event_for_display(event))
+        print()
+    
+    # Ensure website directory exists
+    WEBSITE_DIR.mkdir(parents=True, exist_ok=True)
+    
+    # Save JSON data directly to website folder
+    with open(JSON_OUTPUT, "w", encoding="utf-8") as f:
+        json.dump(future_events, f, indent=2, ensure_ascii=False)
+    print(f"✅ Saved {len(future_events)} events to {JSON_OUTPUT}")
+    
+    # Also save a backup in the script directory
+    backup_json = SCRIPT_DIR / "lorcamersfoort_events.json"
+    with open(backup_json, "w", encoding="utf-8") as f:
+        json.dump(future_events, f, indent=2, ensure_ascii=False)
+    print(f"✅ Backup saved to {backup_json}")
+    
+    # Generate HTML widget
+    html_output = generate_html_widget(future_events)
+    with open(SCRIPT_DIR / "lorcamersfoort_events.html", "w", encoding="utf-8") as f:
+        f.write(html_output)
+    print("✅ Generated lorcamersfoort_events.html")
+    
+    print("
+" + "=" * 50)
+    print("✨ Event update complete!")
+    print("=" * 50
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .event-link:hover {
+            background: #5b4cc7;
+        }
+    </style>
+</head>
+<body>
+    <div class="lorcamersfoort-events">
+        <h2>🏰 Lorcamersfoort Evenementen</h2>
+
+        <div class="event-card">
+            <div class="event-title">donderdag Evening Weekly Play (Constructed)</div>
+            <div class="event-detail">📅 Thursday 22 January 2026, 18:30</div>
+            <div class="event-detail">🎴 Core Constructed</div>
+            <div class="event-detail">💰 Gratis</div>
+            <div class="event-detail">👥 0/16 spelers</div>
+            <a href="https://tcg.ravensburgerplay.com/events/338171" target="_blank" class="event-link">Inschrijven →</a>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">donderdag Evening Winterspell Prerelease - Sealed</div>
+            <div class="event-detail">📅 Thursday 19 February 2026, 18:30</div>
+            <div class="event-detail">🎴 Sealed</div>
+            <div class="event-detail">💰 €40.00</div>
+            <div class="event-detail">👥 0/16 spelers</div>
+            <a href="https://tcg.ravensburgerplay.com/events/340398" target="_blank" class="event-link">Inschrijven →</a>
+        </div>
+
+    </div>
+</body>
+</html>

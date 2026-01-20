@@ -1,0 +1,6 @@
+# Robots.txt voor Lorcamersfoort
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://lorcamersfoort.nl/sitemap.xml

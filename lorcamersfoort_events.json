@@ -1,0 +1,26 @@
+[
+  {
+    "id": 338171,
+    "url": "https://tcg.ravensburgerplay.com/events/338171",
+    "name": "donderdag Evening Weekly Play (Constructed)",
+    "start_datetime": "2026-01-22T18:30:00+00:00",
+    "cost_cents": 0,
+    "cost_display": "Gratis",
+    "capacity": 16,
+    "registered_count": 0,
+    "format": "Core Constructed",
+    "store_name": "Spellenpoort"
+  },
+  {
+    "id": 340398,
+    "url": "https://tcg.ravensburgerplay.com/events/340398",
+    "name": "donderdag Evening Winterspell Prerelease - Sealed",
+    "start_datetime": "2026-02-19T18:30:00+00:00",
+    "cost_cents": 4000,
+    "cost_display": "€40.00",
+    "capacity": 16,
+    "registered_count": 0,
+    "format": "Sealed",
+    "store_name": "Spellenpoort"
+  }
+]
