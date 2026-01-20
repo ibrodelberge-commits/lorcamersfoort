@@ -52,6 +52,7 @@ const translations = {
         'links.challenge': 'De grootste events waar ieder strijdt om een plek voor de World Championship invitation!',
         'links.lorcanaspelen': 'Nog meer events willen vinden? Via LorcanaSpelen vind je gemakkelijk nog meer events in jouw omgeving!',
         'links.discord': 'De officiële Disney Lorcana Discord server. Niet geaffilieerd met Lorcamersfoort.',
+        'links.lorecast': 'Officiële Disney Lorcana LoreCast streams met nieuws, previews en toernooien.',
         
         // Location
         'location.title': 'Locatie',
@@ -125,6 +126,7 @@ const translations = {
         'links.challenge': 'The biggest events where everyone competes for a spot at the World Championship invitation!',
         'links.lorcanaspelen': 'Want to find more events? Via LorcanaSpelen you can easily find more events in your area!',
         'links.discord': 'The official Disney Lorcana Discord server. Not affiliated with Lorcamersfoort.',
+        'links.lorecast': 'Official Disney Lorcana LoreCast streams with news, previews and tournaments.',
         
         // Location
         'location.title': 'Location',
