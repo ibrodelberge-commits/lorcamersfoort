@@ -441,6 +441,27 @@ img {
 .about-icon {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-icon .card-ink-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.link-icon .link-ink-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.contact-icon .contact-ink-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .about-card h3 {
