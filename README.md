@@ -32,7 +32,7 @@ Lorcamersfoort is een community van Disney Lorcana spelers die elke donderdagavo
 
 ### Stap 2: Code pushen
 ```bash
-cd C:\Users\ivor_\lorcamersfoort
+cd C:\Users\User_\lorcamersfoort
 git init
 git add .
 git commit -m "Initial commit: Lorcamersfoort website"
@@ -82,7 +82,7 @@ lorcamersfoort/
 
 ### Windows
 ```bash
-cd C:\Users\ivor_\lorcamersfoort
+cd C:\Users\User_\lorcamersfoort
 python scraper.py
 ```
 
@@ -97,7 +97,7 @@ Of dubbelklik op `update_events.bat`
 ## 🔧 Lokaal Testen
 
 ```bash
-cd C:\Users\ivor_\lorcamersfoort\website
+cd C:\Users\User_\lorcamersfoort\website
 python -m http.server 8080
 ```
 
