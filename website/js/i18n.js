@@ -71,7 +71,8 @@ const translations = {
         // Contact
         'contact.title': 'Contact',
         'contact.intro': 'Heb je vragen over onze community of wil je meer weten over Disney Lorcana in Amersfoort? Neem gerust contact met ons op!',
-        'contact.email': 'E-mail',
+        'contact.event': 'Evenement Contact',
+        'contact.product': 'Product Contact',
         'contact.whatsapp': 'WhatsApp Groep',
         'contact.whatsapp.note': 'Nieuwe leden worden handmatig toegevoegd op aanvraag',
         
@@ -147,7 +148,8 @@ const translations = {
         // Contact
         'contact.title': 'Contact',
         'contact.intro': 'Do you have questions about our community or would you like to know more about Disney Lorcana in Amersfoort? Feel free to contact us!',
-        'contact.email': 'Email',
+        'contact.event': 'Event Contact',
+        'contact.product': 'Product Contact',
         'contact.whatsapp': 'WhatsApp Group',
         'contact.whatsapp.note': 'New members are added manually upon request',
         
