@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Lorcamersfoort - Internationalization (i18n)
  * Language toggle between Dutch and English
  */
@@ -22,17 +22,17 @@ const translations = {
         'about.community.title': 'Onze Community',
         'about.community.text': 'Lorcamersfoort is een enthousiaste groep Disney Lorcana spelers uit Amersfoort en omgeving. Of je nu een ervaren Illumineer bent of net begint met het spel, bij ons ben je welkom!',
         'about.weekly.title': 'Wekelijkse Speeldag',
-        'about.weekly.text': 'Elke donderdag komen we samen in het Denksportcentrum Amersfoort om te spelen, ruilen en nieuwe strategieën te ontdekken. Een gezellige avond vol magie en Disney-plezier!',
+        'about.weekly.text': 'Elke donderdag komen we samen in het Denksportcentrum Amersfoort om te spelen, ruilen en nieuwe strategieÃ«n te ontdekken. Een gezellige avond vol magie en Disney-plezier!',
         'about.tournaments.title': 'Toernooien',
         'about.tournaments.text': 'Naast casual speelavonden organiseren we ook regelmatig toernooien. Van Constructed tot Sealed events - er is voor ieder wat wils!',
         'about.magic.title': 'Word deel van de magie',
         'about.magic.text1': 'Bij Lorcamersfoort draait het niet alleen om winnen. We geloven in een vriendelijke en inclusieve speelomgeving waar iedereen kan genieten van dit fantastische kaartspel.',
         'about.magic.text2': 'Nieuw bij Disney Lorcana? Geen probleem! Onze ervaren spelers helpen je graag op weg met tips over deckbuilding, spelregels en strategie.',
-        'about.features.1': '🎯 Wekelijkse speeldag op donderdag',
-        'about.features.2': '🏛️ Spelen in Denksportcentrum Amersfoort',
-        'about.features.3': '🤝 Vriendelijke en behulpzame community',
-        'about.features.4': '📚 Beginners altijd welkom',
-        'about.features.5': '🔄 Ruilen en handelen',
+        'about.features.1': 'ðŸŽ¯ Wekelijkse speeldag op donderdag',
+        'about.features.2': 'ðŸ›ï¸ Spelen in Denksportcentrum Amersfoort',
+        'about.features.3': 'ðŸ¤ Vriendelijke en behulpzame community',
+        'about.features.4': 'ðŸ“š Beginners altijd welkom',
+        'about.features.5': 'ðŸ”„ Ruilen en handelen',
         
         // Events
         'events.title': 'Aankomende Events',
@@ -47,26 +47,26 @@ const translations = {
         'links.title': 'Handige Links',
         'links.inkdecks': 'Voor Constructed meta decks die actief gespeeld worden in grote en kleine toernooien.',
         'links.dreamborn': 'Voor het bouwen van decks & beheren van je collectie.',
-        'links.resources': 'Officiële speldocumentatie. Onze spelers leggen je ook graag face-to-face uit hoe het spel werkt!',
+        'links.resources': 'OfficiÃ«le speldocumentatie. Onze spelers leggen je ook graag face-to-face uit hoe het spel werkt!',
         'links.cardmarket': 'Voor inkoop en verkoop van individuele kaarten. Mocht niemand de kaart hebben, kijk dan hier!',
         'links.challenge': 'De grootste events waar ieder strijdt om een plek voor de World Championship invitation!',
         'links.lorcanaspelen': 'Nog meer events willen vinden? Via LorcanaSpelen vind je gemakkelijk nog meer events in jouw omgeving!',
-        'links.discord': 'De officiële Disney Lorcana Discord server. Niet geaffilieerd met Lorcamersfoort.',
-        'links.lorecast': 'Officiële Disney Lorcana LoreCast streams met nieuws, previews en toernooien.',
+        'links.discord': 'De officiÃ«le Disney Lorcana Discord server. Niet geaffilieerd met Lorcamersfoort.',
+        'links.lorecast': 'OfficiÃ«le Disney Lorcana LoreCast streams met nieuws, previews en toernooien.',
         
         // Location
         'location.title': 'Locatie',
-        'location.play.badge': '🎴 Speellocatie',
+        'location.play.badge': 'ðŸŽ´ Speellocatie',
         'location.play.description': 'Hier komen we elke donderdag samen om Disney Lorcana te spelen!',
-        'location.address': '📍 Adres:',
-        'location.play.time': '🕐 Lorcana Avond:',
+        'location.address': 'ðŸ“ Adres:',
+        'location.play.time': 'ðŸ• Lorcana Avond:',
         'location.play.schedule': 'Elke donderdag vanaf 19:30',
-        'location.play.parking': '🅿️ Parkeren:',
+        'location.play.parking': 'ðŸ…¿ï¸ Parkeren:',
         'location.play.parkingInfo': 'Gratis parkeren bij de locatie',
-        'location.shop.badge': '🛒 Winkel',
+        'location.shop.badge': 'ðŸ›’ Winkel',
         'location.shop.description': 'Voor al je Disney Lorcana producten en kaarten!',
-        'location.shop.website': '🌐 Website:',
-        'location.directions': '📍 Route plannen',
+        'location.shop.website': 'ðŸŒ Website:',
+        'location.directions': 'ðŸ“ Route plannen',
         
         // Contact
         'contact.title': 'Contact',
@@ -75,9 +75,18 @@ const translations = {
         'contact.whatsapp': 'WhatsApp Groep',
         'contact.whatsapp.note': 'Nieuwe leden worden handmatig toegevoegd op aanvraag',
         
+        // Results page
+        'results.title': ' Event Resultaten',
+        'results.subtitle': 'Bekijk de uitslagen van onze toernooien',
+        'results.info': 'Hieronder vind je de resultaten van afgelopen toernooien. Klik op een event om de volledige standings te bekijken.',
+        'results.coming': 'Resultaten komen binnenkort!',
+        'results.coming.text': 'Na ons eerste toernooi worden de resultaten hier getoond.',
+        'results.back': ' Terug naar Home',
+        'results.upcoming': 'Aankomende Events',
+        
         // Footer
         'footer.description': 'Lorcamersfoort is een onafhankelijke Disney Lorcana community.',
-        'footer.copyright': '© 2026 Lorcamersfoort. Disney Lorcana is een handelsmerk van Disney.'
+        'footer.copyright': 'Â© 2026 Lorcamersfoort. Disney Lorcana is een handelsmerk van Disney.'
     },
     
     en: {
@@ -104,11 +113,11 @@ const translations = {
         'about.magic.title': 'Become part of the magic',
         'about.magic.text1': 'At Lorcamersfoort, it\'s not just about winning. We believe in a friendly and inclusive gaming environment where everyone can enjoy this fantastic card game.',
         'about.magic.text2': 'New to Disney Lorcana? No problem! Our experienced players are happy to help you with tips on deckbuilding, game rules and strategy.',
-        'about.features.1': '🎯 Weekly game night on Thursdays',
-        'about.features.2': '🏛️ Playing at Denksportcentrum Amersfoort',
-        'about.features.3': '🤝 Friendly and helpful community',
-        'about.features.4': '📚 Beginners always welcome',
-        'about.features.5': '🔄 Trading and dealing',
+        'about.features.1': 'ðŸŽ¯ Weekly game night on Thursdays',
+        'about.features.2': 'ðŸ›ï¸ Playing at Denksportcentrum Amersfoort',
+        'about.features.3': 'ðŸ¤ Friendly and helpful community',
+        'about.features.4': 'ðŸ“š Beginners always welcome',
+        'about.features.5': 'ðŸ”„ Trading and dealing',
         
         // Events
         'events.title': 'Upcoming Events',
@@ -132,17 +141,17 @@ const translations = {
         
         // Location
         'location.title': 'Location',
-        'location.play.badge': '🎴 Play Location',
+        'location.play.badge': 'ðŸŽ´ Play Location',
         'location.play.description': 'This is where we gather every Thursday to play Disney Lorcana!',
-        'location.address': '📍 Address:',
-        'location.play.time': '🕐 Lorcana Night:',
+        'location.address': 'ðŸ“ Address:',
+        'location.play.time': 'ðŸ• Lorcana Night:',
         'location.play.schedule': 'Every Thursday from 19:30',
-        'location.play.parking': '🅿️ Parking:',
+        'location.play.parking': 'ðŸ…¿ï¸ Parking:',
         'location.play.parkingInfo': 'Free parking at the venue',
-        'location.shop.badge': '🛒 Store',
+        'location.shop.badge': 'ðŸ›’ Store',
         'location.shop.description': 'For all your Disney Lorcana products and cards!',
-        'location.shop.website': '🌐 Website:',
-        'location.directions': '📍 Get directions',
+        'location.shop.website': 'ðŸŒ Website:',
+        'location.directions': 'ðŸ“ Get directions',
         
         // Contact
         'contact.title': 'Contact',
@@ -151,9 +160,27 @@ const translations = {
         'contact.whatsapp': 'WhatsApp Group',
         'contact.whatsapp.note': 'New members are added manually upon request',
         
+        // Results page
+        'results.title': ' Event Resultaten',
+        'results.subtitle': 'Bekijk de uitslagen van onze toernooien',
+        'results.info': 'Hieronder vind je de resultaten van afgelopen toernooien. Klik op een event om de volledige standings te bekijken.',
+        'results.coming': 'Resultaten komen binnenkort!',
+        'results.coming.text': 'Na ons eerste toernooi worden de resultaten hier getoond.',
+        'results.back': ' Terug naar Home',
+        'results.upcoming': 'Aankomende Events',
+        
+        // Results page
+        'results.title': ' Event Results',
+        'results.subtitle': 'View the results of our tournaments',
+        'results.info': 'Below you will find the results from past tournaments. Click on an event to view the full standings.',
+        'results.coming': 'Results coming soon!',
+        'results.coming.text': 'After our first tournament, the results will be shown here.',
+        'results.back': ' Back to Home',
+        'results.upcoming': 'Upcoming Events',
+        
         // Footer
         'footer.description': 'Lorcamersfoort is an independent Disney Lorcana community.',
-        'footer.copyright': '© 2026 Lorcamersfoort. Disney Lorcana is a trademark of Disney.'
+        'footer.copyright': 'Â© 2026 Lorcamersfoort. Disney Lorcana is a trademark of Disney.'
     }
 };
 
@@ -269,3 +296,4 @@ window.i18n = {
     toggleLanguage,
     applyLanguage
 };
+
