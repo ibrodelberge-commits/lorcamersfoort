@@ -51,6 +51,7 @@ const translations = {
         'links.cardmarket': 'Voor inkoop en verkoop van individuele kaarten. Mocht niemand de kaart hebben, kijk dan hier!',
         'links.challenge': 'De grootste events waar ieder strijdt om een plek voor de World Championship invitation!',
         'links.lorcanaspelen': 'Nog meer events willen vinden? Via LorcanaSpelen vind je gemakkelijk nog meer events in jouw omgeving!',
+        'links.discord': 'De officiële Disney Lorcana Discord server. Niet geaffilieerd met Lorcamersfoort.',
         
         // Location
         'location.title': 'Locatie',
@@ -123,6 +124,7 @@ const translations = {
         'links.cardmarket': 'For buying and selling individual cards. If no one has the card you need, check here!',
         'links.challenge': 'The biggest events where everyone competes for a spot at the World Championship invitation!',
         'links.lorcanaspelen': 'Want to find more events? Via LorcanaSpelen you can easily find more events in your area!',
+        'links.discord': 'The official Disney Lorcana Discord server. Not affiliated with Lorcamersfoort.',
         
         // Location
         'location.title': 'Location',
