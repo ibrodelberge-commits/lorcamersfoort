@@ -113,7 +113,7 @@ async function loadEvents() {
     
     try {
         // Probeer eerst de JSON file te laden
-        const response = await fetch('../lorcamersfoort_events.json');
+        const response = await fetch('data/events.json');
         
         if (!response.ok) {
             throw new Error('Kon events niet laden');

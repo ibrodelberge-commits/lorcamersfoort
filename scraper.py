@@ -22,7 +22,7 @@ STORE_PAGE_URL = f"https://tcg.ravensburgerplay.com/stores/{STORE_UUID}"
 # Output paths
 SCRIPT_DIR = Path(__file__).parent
 WEBSITE_DIR = SCRIPT_DIR / "website"
-JSON_OUTPUT = WEBSITE_DIR / "lorcamersfoort_events.json"
+JSON_OUTPUT = WEBSITE_DIR / "data" / "events.json"
 
 # Known event IDs for your store (from the webpage)
 KNOWN_EVENT_IDS = [338171, 340398]  # Weekly Play and Winterspell Prerelease
