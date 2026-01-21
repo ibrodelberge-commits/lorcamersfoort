@@ -32,18 +32,18 @@ const revealSchedule = {
         { date: "2026-01-30T19:00:00", creator: "Erica de Matteis", url: "https://www.instagram.com/erica_dematteis/", platform: "Instagram" }
     ],
     "UK & Ireland": [
-        { date: "2026-01-21T15:00:00", creator: "Lorcana Player", url: "https://lorcanaplayer.com/", platform: "Website" },
-        { date: "2026-01-21T16:00:00", creator: "Zatu", url: "https://www.board-game.co.uk/author/stefano-paravisi/", platform: "Website" },
-        { date: "2026-01-21T18:00:00", creator: "Earlmeister", url: "https://x.com/Earlmeister_", platform: "X" },
-        { date: "2026-01-21T19:00:00", creator: "Harlan & Allie Sweete", url: "https://www.youtube.com/@harlansweete", platform: "YouTube" },
-        { date: "2026-01-22T20:00:00", creator: "CharltonTCG", url: "https://www.youtube.com/channel/UCt-NPf0zDm1lRwuvhmt4wVg", platform: "YouTube" },
-        { date: "2026-01-22T19:00:00", creator: "Lorcana Decks", url: "https://x.com/Lorcanadecks", platform: "X" },
-        { date: "2026-01-26T21:00:00", creator: "Lorcana Villain", url: "https://x.com/LorcanaVillain", platform: "X" },
-        { date: "2026-01-23T13:00:00", creator: "CozyBoardgames", url: "https://www.instagram.com/cozyboardgames/", platform: "Instagram" },
-        { date: "2026-01-24T14:00:00", creator: "Inkkery", url: "https://www.youtube.com/@Inkkery", platform: "YouTube" },
-        { date: "2026-01-25T17:00:00", creator: "James Hodges", url: "https://www.tiktok.com/@jamesmhodges", platform: "TikTok" },
-        { date: "2026-01-26T20:00:00", creator: "Kimberlyanne Dalton", url: "https://www.tiktok.com/@__kimberlyanne", platform: "TikTok" },
-        { date: "2026-01-27T19:30:00", creator: "WossyPlays", url: "https://www.youtube.com/@WossyPlays/videos", platform: "YouTube" }
+        { date: "2026-01-21T14:00:00", creator: "Lorcana Player", url: "https://lorcanaplayer.com/", platform: "Website" },
+        { date: "2026-01-21T15:00:00", creator: "Zatu", url: "https://www.board-game.co.uk/author/stefano-paravisi/", platform: "Website" },
+        { date: "2026-01-21T17:00:00", creator: "Earlmeister", url: "https://x.com/Earlmeister_", platform: "X" },
+        { date: "2026-01-21T18:00:00", creator: "Harlan & Allie Sweete", url: "https://www.youtube.com/@harlansweete", platform: "YouTube" },
+        { date: "2026-01-22T19:00:00", creator: "CharltonTCG", url: "https://www.youtube.com/channel/UCt-NPf0zDm1lRwuvhmt4wVg", platform: "YouTube" },
+        { date: "2026-01-22T18:00:00", creator: "Lorcana Decks", url: "https://x.com/Lorcanadecks", platform: "X" },
+        { date: "2026-01-26T20:00:00", creator: "Lorcana Villain", url: "https://x.com/LorcanaVillain", platform: "X" },
+        { date: "2026-01-23T12:00:00", creator: "CozyBoardgames", url: "https://www.instagram.com/cozyboardgames/", platform: "Instagram" },
+        { date: "2026-01-24T13:00:00", creator: "Inkkery", url: "https://www.youtube.com/@Inkkery", platform: "YouTube" },
+        { date: "2026-01-25T16:00:00", creator: "James Hodges", url: "https://www.tiktok.com/@jamesmhodges", platform: "TikTok" },
+        { date: "2026-01-26T19:00:00", creator: "Kimberlyanne Dalton", url: "https://www.tiktok.com/@__kimberlyanne", platform: "TikTok" },
+        { date: "2026-01-27T18:30:00", creator: "WossyPlays", url: "https://www.youtube.com/@WossyPlays/videos", platform: "YouTube" }
     ],
     "Nordics": [
         { date: "2026-01-21T10:00:00", creator: "Nordic inkrealm", url: "https://www.instagram.com/nordicinkrealm/", platform: "Instagram" },
@@ -85,23 +85,23 @@ const revealSchedule = {
         { date: "2026-01-30T18:00:00", creator: "TotaHahn", url: "https://www.youtube.com/@TotaHahnLorcana", platform: "YouTube" }
     ],
     "North America": [
-        { date: "2026-01-22T08:00:00", creator: "DWLorcana", url: "https://x.com/dwlorcana", platform: "X" },
-        { date: "2026-01-22T03:00:00", creator: "Lorcana Duo", url: "https://www.instagram.com/lorcanaduo/?hl=en", platform: "Instagram" },
-        { date: "2026-01-23T05:00:00", creator: "enchanted_kim", url: "https://www.instagram.com/enchanted_kim_/?hl=en", platform: "Instagram" },
-        { date: "2026-01-23T07:00:00", creator: "Lorcana Goons", url: "https://www.youtube.com/@LorcanaGoons", platform: "YouTube" },
-        { date: "2026-01-23T08:00:00", creator: "Panderic Quests", url: "https://www.instagram.com/pandericquests/?hl=en", platform: "Instagram" },
-        { date: "2026-01-23T08:00:00", creator: "The Lorekeeper's Inn", url: "https://www.youtube.com/@thelorekeepersinn", platform: "YouTube" },
-        { date: "2026-01-24T02:00:00", creator: "Illumineer's Champion League", url: "https://www.youtube.com/@IllumineerChampionsLeague/streams", platform: "YouTube" },
-        { date: "2026-01-24T03:00:00", creator: "lawcana", url: "https://www.instagram.com/lawcana/", platform: "Instagram" },
-        { date: "2026-01-24T06:00:00", creator: "Googly Glimmers", url: "https://www.youtube.com/@GooglyGlimmers", platform: "YouTube" },
-        { date: "2026-01-25T01:00:00", creator: "ajrafael", url: "https://www.instagram.com/ajrafael/?hl=en", platform: "Instagram" },
-        { date: "2026-01-25T01:00:00", creator: "Kovray", url: "https://www.youtube.com/@kovray", platform: "YouTube" },
-        { date: "2026-01-26T02:00:00", creator: "Eric Switzer", url: "https://x.com/EpicSwitzer", platform: "X" },
-        { date: "2026-01-28T06:00:00", creator: "bibbidi.bobbidi.beard", url: "https://www.instagram.com/bibbidi.bobbidi.beard/", platform: "Instagram" },
-        { date: "2026-01-28T10:00:00", creator: "The Dan Regal", url: "https://youtube.com/@thedanregal", platform: "YouTube" },
-        { date: "2026-01-28T00:00:00", creator: "Garrick's Lorcana Lair", url: "https://www.youtube.com/@TheLorcanaLair", platform: "YouTube" },
-        { date: "2026-01-29T06:00:00", creator: "Brent Mukai", url: "https://youtube.com/@brentsquest", platform: "YouTube" },
-        { date: "2026-01-31T04:00:00", creator: "The Hobbyist Novice", url: "https://www.youtube.com/@TheHobbyistNovice", platform: "YouTube" }
+        { date: "2026-01-22T02:00:00", creator: "DWLorcana", url: "https://x.com/dwlorcana", platform: "X" },
+        { date: "2026-01-21T21:00:00", creator: "Lorcana Duo", url: "https://www.instagram.com/lorcanaduo/?hl=en", platform: "Instagram" },
+        { date: "2026-01-22T23:00:00", creator: "enchanted_kim", url: "https://www.instagram.com/enchanted_kim_/?hl=en", platform: "Instagram" },
+        { date: "2026-01-23T01:00:00", creator: "Lorcana Goons", url: "https://www.youtube.com/@LorcanaGoons", platform: "YouTube" },
+        { date: "2026-01-23T02:00:00", creator: "Panderic Quests", url: "https://www.instagram.com/pandericquests/?hl=en", platform: "Instagram" },
+        { date: "2026-01-23T02:00:00", creator: "The Lorekeeper's Inn", url: "https://www.youtube.com/@thelorekeepersinn", platform: "YouTube" },
+        { date: "2026-01-23T20:00:00", creator: "Illumineer's Champion League", url: "https://www.youtube.com/@IllumineerChampionsLeague/streams", platform: "YouTube" },
+        { date: "2026-01-23T21:00:00", creator: "lawcana", url: "https://www.instagram.com/lawcana/", platform: "Instagram" },
+        { date: "2026-01-24T00:00:00", creator: "Googly Glimmers", url: "https://www.youtube.com/@GooglyGlimmers", platform: "YouTube" },
+        { date: "2026-01-24T19:00:00", creator: "ajrafael", url: "https://www.instagram.com/ajrafael/?hl=en", platform: "Instagram" },
+        { date: "2026-01-24T19:00:00", creator: "Kovray", url: "https://www.youtube.com/@kovray", platform: "YouTube" },
+        { date: "2026-01-25T20:00:00", creator: "Eric Switzer", url: "https://x.com/EpicSwitzer", platform: "X" },
+        { date: "2026-01-28T00:00:00", creator: "bibbidi.bobbidi.beard", url: "https://www.instagram.com/bibbidi.bobbidi.beard/", platform: "Instagram" },
+        { date: "2026-01-28T04:00:00", creator: "The Dan Regal", url: "https://youtube.com/@thedanregal", platform: "YouTube" },
+        { date: "2026-01-27T18:00:00", creator: "Garrick's Lorcana Lair", url: "https://www.youtube.com/@TheLorcanaLair", platform: "YouTube" },
+        { date: "2026-01-29T00:00:00", creator: "Brent Mukai", url: "https://youtube.com/@brentsquest", platform: "YouTube" },
+        { date: "2026-01-30T22:00:00", creator: "The Hobbyist Novice", url: "https://www.youtube.com/@TheHobbyistNovice", platform: "YouTube" }
     ]
 };
 
