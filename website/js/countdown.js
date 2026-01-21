@@ -1,99 +1,107 @@
 /**
  * Lorcamersfoort - Winterspell Reveal Countdown Timer
  * Countdown functionality for content creator reveals
+ * All times are in Amsterdam timezone (Europe/Amsterdam)
  */
 
+// Helper function to parse date string as Amsterdam time (CET = UTC+1)
+function parseAmsterdamTime(dateStr) {
+    // Add CET timezone offset (+01:00) to treat all times as Amsterdam time
+    return new Date(dateStr + '+01:00');
+}
+
 // Reveal schedule data organized by region
+// All times are in Amsterdam timezone (CET/CEST)
 const revealSchedule = {
     "Spain": [
-        { date: "2026-01-23T21:00:00+01:00", creator: "FraviTCG", url: "https://www.youtube.com/@FraviTCG", platform: "YouTube" },
-        { date: "2026-01-25T19:00:00+01:00", creator: "Maestros de Lorcana", url: "https://youtube.com/@maestrosdelorcana", platform: "YouTube" },
-        { date: "2026-01-25T18:30:00+01:00", creator: "La Baraja Encantada", url: "https://www.youtube.com/@LaBarajaEncantada", platform: "YouTube" },
-        { date: "2026-01-27T20:00:00+01:00", creator: "Duelo de tintas", url: "https://www.instagram.com/duelodetintas", platform: "Instagram" },
-        { date: "2026-01-29T20:30:00+01:00", creator: "Leyendas de Lorcana", url: "https://youtube.com/@leyendasdelorcana", platform: "YouTube" },
-        { date: "2026-01-28T21:00:00+01:00", creator: "Nachel_K", url: "https://www.instagram.com/nachel_k/", platform: "Instagram" },
-        { date: "2026-01-29T20:30:00+01:00", creator: "De Buena Tinta", url: "https://www.instagram.com/debuenatinta.lorcana/", platform: "Instagram" }
+        { date: "2026-01-23T21:00:00", creator: "FraviTCG", url: "https://www.youtube.com/@FraviTCG", platform: "YouTube" },
+        { date: "2026-01-25T19:00:00", creator: "Maestros de Lorcana", url: "https://youtube.com/@maestrosdelorcana", platform: "YouTube" },
+        { date: "2026-01-25T18:30:00", creator: "La Baraja Encantada", url: "https://www.youtube.com/@LaBarajaEncantada", platform: "YouTube" },
+        { date: "2026-01-27T20:00:00", creator: "Duelo de tintas", url: "https://www.instagram.com/duelodetintas", platform: "Instagram" },
+        { date: "2026-01-29T20:30:00", creator: "Leyendas de Lorcana", url: "https://youtube.com/@leyendasdelorcana", platform: "YouTube" },
+        { date: "2026-01-28T21:00:00", creator: "Nachel_K", url: "https://www.instagram.com/nachel_k/", platform: "Instagram" },
+        { date: "2026-01-29T20:30:00", creator: "De Buena Tinta", url: "https://www.instagram.com/debuenatinta.lorcana/", platform: "Instagram" }
     ],
     "Italy": [
-        { date: "2026-01-21T21:30:00+01:00", creator: "Lore League", url: "https://www.instagram.com/loreleagueig/", platform: "Instagram" },
-        { date: "2026-01-22T13:00:00+01:00", creator: "Escilgioco", url: "http://www.youtube.com/@escilgioco", platform: "YouTube" },
-        { date: "2026-01-23T18:30:00+01:00", creator: "Lorcanita", url: "https://www.instagram.com/lorcanita.dli/", platform: "Instagram" },
-        { date: "2026-01-26T12:00:00+01:00", creator: "Amici di Giula", url: "https://www.instagram.com/amicidigiula", platform: "Instagram" },
-        { date: "2026-01-27T15:00:00+01:00", creator: "Mario Petillo", url: "https://www.instagram.com/mariopetillo/", platform: "Instagram" },
-        { date: "2026-01-28T14:00:00+01:00", creator: "MakeawishTCG", url: "https://www.instagram.com/makeawish_pkmn/", platform: "Instagram" },
-        { date: "2026-01-30T19:00:00+01:00", creator: "Erica de Matteis", url: "https://www.instagram.com/erica_dematteis/", platform: "Instagram" }
+        { date: "2026-01-21T21:30:00", creator: "Lore League", url: "https://www.instagram.com/loreleagueig/", platform: "Instagram" },
+        { date: "2026-01-22T13:00:00", creator: "Escilgioco", url: "http://www.youtube.com/@escilgioco", platform: "YouTube" },
+        { date: "2026-01-23T18:30:00", creator: "Lorcanita", url: "https://www.instagram.com/lorcanita.dli/", platform: "Instagram" },
+        { date: "2026-01-26T12:00:00", creator: "Amici di Giula", url: "https://www.instagram.com/amicidigiula", platform: "Instagram" },
+        { date: "2026-01-27T15:00:00", creator: "Mario Petillo", url: "https://www.instagram.com/mariopetillo/", platform: "Instagram" },
+        { date: "2026-01-28T14:00:00", creator: "MakeawishTCG", url: "https://www.instagram.com/makeawish_pkmn/", platform: "Instagram" },
+        { date: "2026-01-30T19:00:00", creator: "Erica de Matteis", url: "https://www.instagram.com/erica_dematteis/", platform: "Instagram" }
     ],
     "UK & Ireland": [
-        { date: "2026-01-21T14:00:00+00:00", creator: "Lorcana Player", url: "https://lorcanaplayer.com/", platform: "Website" },
-        { date: "2026-01-21T15:00:00+00:00", creator: "Zatu", url: "https://www.board-game.co.uk/author/stefano-paravisi/", platform: "Website" },
-        { date: "2026-01-21T17:00:00+00:00", creator: "Earlmeister", url: "https://x.com/Earlmeister_", platform: "X" },
-        { date: "2026-01-21T18:00:00+00:00", creator: "Harlan & Allie Sweete", url: "https://www.youtube.com/@harlansweete", platform: "YouTube" },
-        { date: "2026-01-22T19:00:00+00:00", creator: "CharltonTCG", url: "https://www.youtube.com/channel/UCt-NPf0zDm1lRwuvhmt4wVg", platform: "YouTube" },
-        { date: "2026-01-22T18:00:00+00:00", creator: "Lorcana Decks", url: "https://x.com/Lorcanadecks", platform: "X" },
-        { date: "2026-01-26T20:00:00+00:00", creator: "Lorcana Villain", url: "https://x.com/LorcanaVillain", platform: "X" },
-        { date: "2026-01-23T12:00:00+00:00", creator: "CozyBoardgames", url: "https://www.instagram.com/cozyboardgames/", platform: "Instagram" },
-        { date: "2026-01-24T13:00:00+00:00", creator: "Inkkery", url: "https://www.youtube.com/@Inkkery", platform: "YouTube" },
-        { date: "2026-01-25T16:00:00+00:00", creator: "James Hodges", url: "https://www.tiktok.com/@jamesmhodges", platform: "TikTok" },
-        { date: "2026-01-26T19:00:00+00:00", creator: "Kimberlyanne Dalton", url: "https://www.tiktok.com/@__kimberlyanne", platform: "TikTok" },
-        { date: "2026-01-27T18:30:00+00:00", creator: "WossyPlays", url: "https://www.youtube.com/@WossyPlays/videos", platform: "YouTube" }
+        { date: "2026-01-21T15:00:00", creator: "Lorcana Player", url: "https://lorcanaplayer.com/", platform: "Website" },
+        { date: "2026-01-21T16:00:00", creator: "Zatu", url: "https://www.board-game.co.uk/author/stefano-paravisi/", platform: "Website" },
+        { date: "2026-01-21T18:00:00", creator: "Earlmeister", url: "https://x.com/Earlmeister_", platform: "X" },
+        { date: "2026-01-21T19:00:00", creator: "Harlan & Allie Sweete", url: "https://www.youtube.com/@harlansweete", platform: "YouTube" },
+        { date: "2026-01-22T20:00:00", creator: "CharltonTCG", url: "https://www.youtube.com/channel/UCt-NPf0zDm1lRwuvhmt4wVg", platform: "YouTube" },
+        { date: "2026-01-22T19:00:00", creator: "Lorcana Decks", url: "https://x.com/Lorcanadecks", platform: "X" },
+        { date: "2026-01-26T21:00:00", creator: "Lorcana Villain", url: "https://x.com/LorcanaVillain", platform: "X" },
+        { date: "2026-01-23T13:00:00", creator: "CozyBoardgames", url: "https://www.instagram.com/cozyboardgames/", platform: "Instagram" },
+        { date: "2026-01-24T14:00:00", creator: "Inkkery", url: "https://www.youtube.com/@Inkkery", platform: "YouTube" },
+        { date: "2026-01-25T17:00:00", creator: "James Hodges", url: "https://www.tiktok.com/@jamesmhodges", platform: "TikTok" },
+        { date: "2026-01-26T20:00:00", creator: "Kimberlyanne Dalton", url: "https://www.tiktok.com/@__kimberlyanne", platform: "TikTok" },
+        { date: "2026-01-27T19:30:00", creator: "WossyPlays", url: "https://www.youtube.com/@WossyPlays/videos", platform: "YouTube" }
     ],
     "Nordics": [
-        { date: "2026-01-21T10:00:00+01:00", creator: "Nordic inkrealm", url: "https://www.instagram.com/nordicinkrealm/", platform: "Instagram" },
-        { date: "2026-01-22T10:00:00+01:00", creator: "Unelmoin", url: "https://www.tiktok.com/@unelmoinn", platform: "TikTok" },
-        { date: "2026-01-23T10:00:00+01:00", creator: "TheLegendOfDanne", url: "https://www.instagram.com/thelegendofdanne/", platform: "Instagram" },
-        { date: "2026-01-24T10:00:00+01:00", creator: "Ruudukko", url: "https://www.youtube.com/channel/UC1-ysqxfsIzVCQ-WwCoUiHQ/videos", platform: "YouTube" }
+        { date: "2026-01-21T10:00:00", creator: "Nordic inkrealm", url: "https://www.instagram.com/nordicinkrealm/", platform: "Instagram" },
+        { date: "2026-01-22T10:00:00", creator: "Unelmoin", url: "https://www.tiktok.com/@unelmoinn", platform: "TikTok" },
+        { date: "2026-01-23T10:00:00", creator: "TheLegendOfDanne", url: "https://www.instagram.com/thelegendofdanne/", platform: "Instagram" },
+        { date: "2026-01-24T10:00:00", creator: "Ruudukko", url: "https://www.youtube.com/channel/UC1-ysqxfsIzVCQ-WwCoUiHQ/videos", platform: "YouTube" }
     ],
     "Benelux": [
-        { date: "2026-01-22T19:00:00+01:00", creator: "Illumineer Tales", url: "https://www.instagram.com/illumineertales/", platform: "Instagram" },
-        { date: "2026-01-24T19:00:00+01:00", creator: "confluxvzw", url: "https://www.instagram.com/confluxvzw/", platform: "Instagram" },
-        { date: "2026-01-25T19:00:00+01:00", creator: "Lorcana Sabine", url: "https://www.instagram.com/lorcana.sabine/", platform: "Instagram" },
-        { date: "2026-01-26T19:00:00+01:00", creator: "onelore.lorcana", url: "https://www.instagram.com/onelore.lorcana/", platform: "Instagram" }
+        { date: "2026-01-22T19:00:00", creator: "Illumineer Tales", url: "https://www.instagram.com/illumineertales/", platform: "Instagram" },
+        { date: "2026-01-24T19:00:00", creator: "confluxvzw", url: "https://www.instagram.com/confluxvzw/", platform: "Instagram" },
+        { date: "2026-01-25T19:00:00", creator: "Lorcana Sabine", url: "https://www.instagram.com/lorcana.sabine/", platform: "Instagram" },
+        { date: "2026-01-26T19:00:00", creator: "onelore.lorcana", url: "https://www.instagram.com/onelore.lorcana/", platform: "Instagram" }
     ],
     "Poland": [
-        { date: "2026-01-21T15:00:00+01:00", creator: "weronika_bociag", url: "https://www.instagram.com/weronika_bociag/", platform: "Instagram" },
-        { date: "2026-01-24T14:00:00+01:00", creator: "goofyplayslorcana", url: "https://www.instagram.com/goofyplayslorcana/", platform: "Instagram" },
-        { date: "2026-01-25T18:00:00+01:00", creator: "Voj4k", url: "https://youtube.com/@voj4k", platform: "YouTube" },
-        { date: "2026-01-26T18:00:00+01:00", creator: "zavadahs", url: "https://www.twitch.tv/zavadahs", platform: "Twitch" }
+        { date: "2026-01-21T15:00:00", creator: "weronika_bociag", url: "https://www.instagram.com/weronika_bociag/", platform: "Instagram" },
+        { date: "2026-01-24T14:00:00", creator: "goofyplayslorcana", url: "https://www.instagram.com/goofyplayslorcana/", platform: "Instagram" },
+        { date: "2026-01-25T18:00:00", creator: "Voj4k", url: "https://youtube.com/@voj4k", platform: "YouTube" },
+        { date: "2026-01-26T18:00:00", creator: "zavadahs", url: "https://www.twitch.tv/zavadahs", platform: "Twitch" }
     ],
     "France": [
-        { date: "2026-01-21T10:30:00+01:00", creator: "Val & PL", url: "https://www.twitch.tv/val_pl_magicarenafr", platform: "Twitch" },
-        { date: "2026-01-21T22:30:00+01:00", creator: "Boba", url: "https://www.twitch.tv/bobafett17", platform: "Twitch" },
-        { date: "2026-01-22T07:00:00+01:00", creator: "Dodane", url: "https://www.youtube.com/@dodanelorcana", platform: "YouTube" },
-        { date: "2026-01-22T17:00:00+01:00", creator: "Tom & Revan", url: "https://www.youtube.com/@TomEtRevan", platform: "YouTube" },
-        { date: "2026-01-24T19:00:00+01:00", creator: "Gaëtan Call", url: "https://www.youtube.com/@gaetan_call", platform: "YouTube" },
-        { date: "2026-01-27T22:00:00+01:00", creator: "Les joueurs du dimanche", url: "https://www.twitch.tv/maxildan", platform: "Twitch" }
+        { date: "2026-01-21T10:30:00", creator: "Val & PL", url: "https://www.twitch.tv/val_pl_magicarenafr", platform: "Twitch" },
+        { date: "2026-01-21T22:30:00", creator: "Boba", url: "https://www.twitch.tv/bobafett17", platform: "Twitch" },
+        { date: "2026-01-22T07:00:00", creator: "Dodane", url: "https://www.youtube.com/@dodanelorcana", platform: "YouTube" },
+        { date: "2026-01-22T17:00:00", creator: "Tom & Revan", url: "https://www.youtube.com/@TomEtRevan", platform: "YouTube" },
+        { date: "2026-01-24T19:00:00", creator: "Gaëtan Call", url: "https://www.youtube.com/@gaetan_call", platform: "YouTube" },
+        { date: "2026-01-27T22:00:00", creator: "Les joueurs du dimanche", url: "https://www.twitch.tv/maxildan", platform: "Twitch" }
     ],
     "Germany": [
-        { date: "2026-01-21T14:00:00+01:00", creator: "Babbelheld", url: "https://www.youtube.com/@Babbelheld_Lorcana", platform: "YouTube" },
-        { date: "2026-01-22T19:30:00+01:00", creator: "Tintenvorrat", url: "https://www.instagram.com/tintenvorrat/", platform: "Instagram" },
-        { date: "2026-01-23T18:00:00+01:00", creator: "DerDobby", url: "https://www.youtube.com/@xDerDobbyx", platform: "YouTube" },
-        { date: "2026-01-24T17:27:00+01:00", creator: "Ready_Set_Rob", url: "https://www.instagram.com/ready_set_rob/", platform: "Instagram" },
-        { date: "2026-01-24T18:00:00+01:00", creator: "Disphielifestyle", url: "https://www.instagram.com/disphielifestyle/", platform: "Instagram" },
-        { date: "2026-01-25T19:04:00+01:00", creator: "Sl4sH", url: "https://www.youtube.com/@donsl4sh177", platform: "YouTube" },
-        { date: "2026-01-25T18:00:00+01:00", creator: "Ink2well", url: "https://www.youtube.com/@Ink2well", platform: "YouTube" },
-        { date: "2026-01-26T16:00:00+01:00", creator: "CardCrows", url: "https://www.youtube.com/@CardCrows", platform: "YouTube" },
-        { date: "2026-01-26T13:00:00+01:00", creator: "LorcanaTactics", url: "https://www.instagram.com/lorcanatactics/", platform: "Instagram" },
-        { date: "2026-01-28T13:37:00+01:00", creator: "RadioNukular", url: "https://www.instagram.com/radionukular/", platform: "Instagram" },
-        { date: "2026-01-30T18:00:00+01:00", creator: "TotaHahn", url: "https://www.youtube.com/@TotaHahnLorcana", platform: "YouTube" }
+        { date: "2026-01-21T14:00:00", creator: "Babbelheld", url: "https://www.youtube.com/@Babbelheld_Lorcana", platform: "YouTube" },
+        { date: "2026-01-22T19:30:00", creator: "Tintenvorrat", url: "https://www.instagram.com/tintenvorrat/", platform: "Instagram" },
+        { date: "2026-01-23T18:00:00", creator: "DerDobby", url: "https://www.youtube.com/@xDerDobbyx", platform: "YouTube" },
+        { date: "2026-01-24T17:27:00", creator: "Ready_Set_Rob", url: "https://www.instagram.com/ready_set_rob/", platform: "Instagram" },
+        { date: "2026-01-24T18:00:00", creator: "Disphielifestyle", url: "https://www.instagram.com/disphielifestyle/", platform: "Instagram" },
+        { date: "2026-01-25T19:04:00", creator: "Sl4sH", url: "https://www.youtube.com/@donsl4sh177", platform: "YouTube" },
+        { date: "2026-01-25T18:00:00", creator: "Ink2well", url: "https://www.youtube.com/@Ink2well", platform: "YouTube" },
+        { date: "2026-01-26T16:00:00", creator: "CardCrows", url: "https://www.youtube.com/@CardCrows", platform: "YouTube" },
+        { date: "2026-01-26T13:00:00", creator: "LorcanaTactics", url: "https://www.instagram.com/lorcanatactics/", platform: "Instagram" },
+        { date: "2026-01-28T13:37:00", creator: "RadioNukular", url: "https://www.instagram.com/radionukular/", platform: "Instagram" },
+        { date: "2026-01-30T18:00:00", creator: "TotaHahn", url: "https://www.youtube.com/@TotaHahnLorcana", platform: "YouTube" }
     ],
     "North America": [
-        { date: "2026-01-22T02:00:00-05:00", creator: "DWLorcana", url: "https://x.com/dwlorcana", platform: "X" },
-        { date: "2026-01-21T21:00:00-05:00", creator: "Lorcana Duo", url: "https://www.instagram.com/lorcanaduo/?hl=en", platform: "Instagram" },
-        { date: "2026-01-22T23:00:00-05:00", creator: "enchanted_kim", url: "https://www.instagram.com/enchanted_kim_/?hl=en", platform: "Instagram" },
-        { date: "2026-01-23T01:00:00-05:00", creator: "Lorcana Goons", url: "https://www.youtube.com/@LorcanaGoons", platform: "YouTube" },
-        { date: "2026-01-23T02:00:00-05:00", creator: "Panderic Quests", url: "https://www.instagram.com/pandericquests/?hl=en", platform: "Instagram" },
-        { date: "2026-01-23T02:00:00-05:00", creator: "The Lorekeeper's Inn", url: "https://www.youtube.com/@thelorekeepersinn", platform: "YouTube" },
-        { date: "2026-01-23T20:00:00-05:00", creator: "Illumineer's Champion League", url: "https://www.youtube.com/@IllumineerChampionsLeague/streams", platform: "YouTube" },
-        { date: "2026-01-23T21:00:00-05:00", creator: "lawcana", url: "https://www.instagram.com/lawcana/", platform: "Instagram" },
-        { date: "2026-01-24T00:00:00-05:00", creator: "Googly Glimmers", url: "https://www.youtube.com/@GooglyGlimmers", platform: "YouTube" },
-        { date: "2026-01-24T19:00:00-05:00", creator: "ajrafael", url: "https://www.instagram.com/ajrafael/?hl=en", platform: "Instagram" },
-        { date: "2026-01-24T19:00:00-05:00", creator: "Kovray", url: "https://www.youtube.com/@kovray", platform: "YouTube" },
-        { date: "2026-01-25T20:00:00-05:00", creator: "Eric Switzer", url: "https://x.com/EpicSwitzer", platform: "X" },
-        { date: "2026-01-28T00:00:00-05:00", creator: "bibbidi.bobbidi.beard", url: "https://www.instagram.com/bibbidi.bobbidi.beard/", platform: "Instagram" },
-        { date: "2026-01-28T04:00:00-05:00", creator: "The Dan Regal", url: "https://youtube.com/@thedanregal", platform: "YouTube" },
-        { date: "2026-01-27T18:00:00-05:00", creator: "Garrick's Lorcana Lair", url: "https://www.youtube.com/@TheLorcanaLair", platform: "YouTube" },
-        { date: "2026-01-29T00:00:00-05:00", creator: "Brent Mukai", url: "https://youtube.com/@brentsquest", platform: "YouTube" },
-        { date: "2026-01-30T22:00:00-05:00", creator: "The Hobbyist Novice", url: "https://www.youtube.com/@TheHobbyistNovice", platform: "YouTube" }
+        { date: "2026-01-22T08:00:00", creator: "DWLorcana", url: "https://x.com/dwlorcana", platform: "X" },
+        { date: "2026-01-22T03:00:00", creator: "Lorcana Duo", url: "https://www.instagram.com/lorcanaduo/?hl=en", platform: "Instagram" },
+        { date: "2026-01-23T05:00:00", creator: "enchanted_kim", url: "https://www.instagram.com/enchanted_kim_/?hl=en", platform: "Instagram" },
+        { date: "2026-01-23T07:00:00", creator: "Lorcana Goons", url: "https://www.youtube.com/@LorcanaGoons", platform: "YouTube" },
+        { date: "2026-01-23T08:00:00", creator: "Panderic Quests", url: "https://www.instagram.com/pandericquests/?hl=en", platform: "Instagram" },
+        { date: "2026-01-23T08:00:00", creator: "The Lorekeeper's Inn", url: "https://www.youtube.com/@thelorekeepersinn", platform: "YouTube" },
+        { date: "2026-01-24T02:00:00", creator: "Illumineer's Champion League", url: "https://www.youtube.com/@IllumineerChampionsLeague/streams", platform: "YouTube" },
+        { date: "2026-01-24T03:00:00", creator: "lawcana", url: "https://www.instagram.com/lawcana/", platform: "Instagram" },
+        { date: "2026-01-24T06:00:00", creator: "Googly Glimmers", url: "https://www.youtube.com/@GooglyGlimmers", platform: "YouTube" },
+        { date: "2026-01-25T01:00:00", creator: "ajrafael", url: "https://www.instagram.com/ajrafael/?hl=en", platform: "Instagram" },
+        { date: "2026-01-25T01:00:00", creator: "Kovray", url: "https://www.youtube.com/@kovray", platform: "YouTube" },
+        { date: "2026-01-26T02:00:00", creator: "Eric Switzer", url: "https://x.com/EpicSwitzer", platform: "X" },
+        { date: "2026-01-28T06:00:00", creator: "bibbidi.bobbidi.beard", url: "https://www.instagram.com/bibbidi.bobbidi.beard/", platform: "Instagram" },
+        { date: "2026-01-28T10:00:00", creator: "The Dan Regal", url: "https://youtube.com/@thedanregal", platform: "YouTube" },
+        { date: "2026-01-28T00:00:00", creator: "Garrick's Lorcana Lair", url: "https://www.youtube.com/@TheLorcanaLair", platform: "YouTube" },
+        { date: "2026-01-29T06:00:00", creator: "Brent Mukai", url: "https://youtube.com/@brentsquest", platform: "YouTube" },
+        { date: "2026-01-31T04:00:00", creator: "The Hobbyist Novice", url: "https://www.youtube.com/@TheHobbyistNovice", platform: "YouTube" }
     ]
 };
 
@@ -245,11 +253,11 @@ function renderRevealSchedule() {
     });
 
     // Sort by date
-    allReveals.sort((a, b) => new Date(a.date) - new Date(b.date));
+    allReveals.sort((a, b) => parseAmsterdamTime(a.date) - parseAmsterdamTime(b.date));
 
     // Filter based on showPastReveals
     if (!showPastReveals) {
-        allReveals = allReveals.filter(reveal => new Date(reveal.date) > now);
+        allReveals = allReveals.filter(reveal => parseAmsterdamTime(reveal.date) > now);
     }
 
     // Update next reveal hero
@@ -268,7 +276,7 @@ function renderRevealSchedule() {
     }
 
     allReveals.forEach((reveal, index) => {
-        const revealDate = new Date(reveal.date);
+        const revealDate = parseAmsterdamTime(reveal.date);
         const isPast = revealDate <= now;
         const isLive = !isPast && (revealDate - now) < 3600000; // Within 1 hour
 
@@ -310,7 +318,7 @@ function updateNextRevealHero(allReveals, now) {
     const heroCountdown = document.getElementById('hero-countdown');
     if (!heroCountdown) return;
 
-    const upcomingReveals = allReveals.filter(r => new Date(r.date) > now);
+    const upcomingReveals = allReveals.filter(r => parseAmsterdamTime(r.date) > now);
     
     if (upcomingReveals.length === 0) {
         heroCountdown.innerHTML = `
@@ -323,7 +331,7 @@ function updateNextRevealHero(allReveals, now) {
     }
 
     const nextReveal = upcomingReveals[0];
-    const nextDate = new Date(nextReveal.date);
+    const nextDate = parseAmsterdamTime(nextReveal.date);
     const diff = nextDate - now;
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -378,12 +386,12 @@ function updateAllCountdowns() {
             });
         }
     });
-    allReveals.sort((a, b) => new Date(a.date) - new Date(b.date));
+    allReveals.sort((a, b) => parseAmsterdamTime(a.date) - parseAmsterdamTime(b.date));
     updateNextRevealHero(allReveals, now);
 
     // Update card countdowns
     document.querySelectorAll('.reveal-countdown[data-target]').forEach(el => {
-        const targetDate = new Date(el.dataset.target);
+        const targetDate = parseAmsterdamTime(el.dataset.target);
         const diff = targetDate - now;
 
         if (diff <= 0) {
@@ -411,16 +419,17 @@ function updateAllCountdowns() {
     });
 }
 
-// Format date for display
+// Format date for display (in Amsterdam timezone)
 function formatDate(date) {
-    const options = { weekday: 'short', month: 'short', day: 'numeric' };
+    const options = { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'Europe/Amsterdam' };
     return date.toLocaleDateString(currentLang === 'nl' ? 'nl-NL' : 'en-US', options);
 }
 
-// Format time for display
+// Format time for display (in Amsterdam timezone)
 function formatTime(date) {
-    const options = { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
-    return date.toLocaleTimeString(currentLang === 'nl' ? 'nl-NL' : 'en-US', options);
+    const options = { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Amsterdam' };
+    const timeStr = date.toLocaleTimeString(currentLang === 'nl' ? 'nl-NL' : 'en-US', options);
+    return timeStr + ' CET';
 }
 
 // Language toggle support
