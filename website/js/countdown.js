@@ -102,6 +102,18 @@ const revealSchedule = {
         { date: "2026-01-27T18:00:00", creator: "Garrick's Lorcana Lair", url: "https://www.youtube.com/@TheLorcanaLair", platform: "YouTube" },
         { date: "2026-01-29T00:00:00", creator: "Brent Mukai", url: "https://youtube.com/@brentsquest", platform: "YouTube" },
         { date: "2026-01-30T22:00:00", creator: "The Hobbyist Novice", url: "https://www.youtube.com/@TheHobbyistNovice", platform: "YouTube" }
+    ],
+    "Asia": [
+        { date: "2026-01-21T12:00:00", creator: "Geek Culture", url: "https://geekculture.co/", platform: "Website" },
+        { date: "2026-01-24T11:00:00", creator: "Eddy Fazly", url: "https://www.youtube.com/@eddyfazly/featured", platform: "YouTube" },
+        { date: "2026-01-26T10:00:00", creator: "nuvchun", url: "https://www.instagram.com/nuvchun", platform: "Instagram" },
+        { date: "2026-01-26T12:00:00", creator: "Timetoplaytoys", url: "https://www.instagram.com/timetoplaytoys/", platform: "Instagram" },
+        { date: "2026-01-26T12:00:00", creator: "Poikollect", url: "https://www.facebook.com/Poikollect", platform: "Facebook" },
+        { date: "2026-01-26T13:00:00", creator: "Penguin Hut", url: "https://www.facebook.com/share/1DJMXd2fSJ/", platform: "Facebook" },
+        { date: "2026-01-27T05:00:00", creator: "simon.tcg", url: "https://www.instagram.com/simon.tcg/", platform: "Instagram" },
+        { date: "2026-01-27T11:00:00", creator: "Ranz Kyle", url: "https://www.facebook.com/ranzkyle", platform: "Facebook" },
+        { date: "2026-01-28T11:00:00", creator: "卡刷得過", url: "https://www.youtube.com/@CardConquest", platform: "YouTube" },
+        { date: "2026-01-28T13:00:00", creator: "Edo Huang", url: "https://www.youtube.com/@EdoHuangMagic/shorts", platform: "YouTube" }
     ]
 };
 
@@ -112,7 +124,8 @@ const platformIcons = {
     "TikTok": "🎵",
     "Twitch": "📺",
     "X": "𝕏",
-    "Website": "🌐"
+    "Website": "🌐",
+    "Facebook": "👍"
 };
 
 // Language strings
