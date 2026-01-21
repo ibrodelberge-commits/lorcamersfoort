@@ -171,6 +171,28 @@ img {
     background: rgba(212, 168, 83, 0.1);
 }
 
+.nav-link.nav-highlight {
+    background: linear-gradient(135deg, rgba(100, 150, 255, 0.2) 0%, rgba(150, 200, 255, 0.15) 100%);
+    border: 1px solid rgba(150, 200, 255, 0.3);
+    color: #a8d4ff;
+    animation: winterspellGlow 2s ease-in-out infinite;
+}
+
+.nav-link.nav-highlight:hover {
+    background: linear-gradient(135deg, rgba(100, 150, 255, 0.3) 0%, rgba(150, 200, 255, 0.25) 100%);
+    border-color: rgba(150, 200, 255, 0.5);
+    color: #c8e8ff;
+}
+
+@keyframes winterspellGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(150, 200, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(150, 200, 255, 0.5);
+    }
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;

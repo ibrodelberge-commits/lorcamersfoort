@@ -11,6 +11,11 @@ const translations = {
         'nav.links': 'Links',
         'nav.location': 'Locatie',
         'nav.contact': 'Contact',
+        'nav.reveals': '❄️ Winterspell',
+        
+        // Reveals page
+        'reveals.subtitle': 'Content Creator Kaart Onthullingen',
+        'reveals.backToMain': 'Terug naar hoofdpagina',
         
         // Hero
         'hero.title': 'Welkom bij <span class="highlight">Lorcamersfoort</span>',
@@ -88,6 +93,11 @@ const translations = {
         'nav.links': 'Links',
         'nav.location': 'Location',
         'nav.contact': 'Contact',
+        'nav.reveals': '❄️ Winterspell',
+        
+        // Reveals page
+        'reveals.subtitle': 'Content Creator Card Reveals',
+        'reveals.backToMain': 'Back to main page',
         
         // Hero
         'hero.title': 'Welcome to <span class="highlight">Lorcamersfoort</span>',

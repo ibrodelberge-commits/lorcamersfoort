@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Winterspell Reveals Countdown | Lorcamersfoort - Disney Lorcana</title>
+    <meta name="description" content="Countdown timer voor alle Winterspell kaart onthullingen door content creators. Bekijk wanneer de nieuwste Disney Lorcana kaarten onthuld worden!">
+    <meta name="keywords" content="Winterspell, Disney Lorcana, Lorcana reveals, kaart onthullingen, content creators, countdown timer, Set 11">
+    <meta name="author" content="Lorcamersfoort">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lorcamersfoort.nl/reveals.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lorcamersfoort.nl/reveals.html">
+    <meta property="og:title" content="Winterspell Reveals Countdown | Disney Lorcana">
+    <meta property="og:description" content="Countdown timer voor alle Winterspell kaart onthullingen door content creators wereldwijd.">
+    <meta property="og:image" content="https://ibrodelberge-commits.github.io/lorcamersfoort/website/assets/winterspell-og.jpg">
+    <meta property="og:locale" content="nl_NL">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Winterspell Reveals Countdown | Disney Lorcana">
+    <meta name="twitter:description" content="Countdown timer voor alle Winterspell kaart onthullingen.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/Logo/LORCAMERSFOORT_logo.svg" alt="Lorcamersfoort - Disney Lorcana Amersfoort">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#over-ons" class="nav-link" data-i18n="nav.about">Over Ons</a></li>
+                <li><a href="index.html#events" class="nav-link" data-i18n="nav.events">Events</a></li>
+                <li><a href="index.html#locatie" class="nav-link" data-i18n="nav.location">Locatie</a></li>
+                <li><a href="index.html#links" class="nav-link" data-i18n="nav.links">Links</a></li>
+                <li><a href="reveals.html" class="nav-link active" data-i18n="nav.reveals">Reveals</a></li>
+            </ul>
+            <div class="lang-toggle-pill" id="langToggle">
+                <button class="lang-option active" data-lang="nl">NL</button>
+                <button class="lang-option" data-lang="en">EN</button>
+            </div>
+            <button class="nav-toggle" aria-label="Menu openen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Countdown -->
+    <header class="reveals-hero">
+        <div class="reveals-hero-overlay"></div>
+        <div class="reveals-hero-content">
+            <div class="winterspell-logo">
+                <img src="https://brand.ravensburger-group.com/api/attachment/download/eyJibG9ja19yZWZlcmVuY2UiOm51bGwsImlkIjoyMDE3fQ:ravensburger:3xYdMchNIuy2Q2i6NEqxIwXnPMFqaaaVX-bmrAx-CBg" 
+                     alt="Winterspell Logo" 
+                     class="winterspell-logo-img"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <h1 class="winterspell-title-fallback" style="display:none;">Winterspell</h1>
+            </div>
+            <p class="reveals-subtitle" data-i18n="reveals.subtitle">Content Creator Card Reveals</p>
+            
+            <div class="hero-countdown-wrapper" id="hero-countdown">
+                <!-- Countdown will be inserted here by JavaScript -->
+                <div class="hero-timer-loading">
+                    <div class="timer-block">
+                        <span class="timer-value">--</span>
+                        <span class="timer-label">Dagen</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-block">
+                        <span class="timer-value">--</span>
+                        <span class="timer-label">Uren</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-block">
+                        <span class="timer-value">--</span>
+                        <span class="timer-label">Minuten</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-block">
+                        <span class="timer-value">--</span>
+                        <span class="timer-label">Seconden</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative snowflakes -->
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">❄</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❄</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❄</div>
+            <div class="snowflake">❅</div>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="region-filters" id="region-filters">
+                    <!-- Filter buttons will be inserted by JavaScript -->
+                </div>
+                <button class="toggle-past-btn" id="toggle-past">
+                    Toon Verlopen
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reveals Grid -->
+    <section class="reveals-section">
+        <div class="container">
+            <div class="reveals-grid" id="reveals-container">
+                <!-- Reveal cards will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Main Site -->
+    <section class="back-section">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <span class="back-arrow">←</span>
+                <span data-i18n="reveals.backToMain">Terug naar hoofdpagina</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="footer-logo-link" aria-label="Terug naar home">
+                        <img src="assets/Logo/LORCAMERSFOORT_logo.svg" alt="Lorcamersfoort" class="footer-logo-img">
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <p data-i18n="footer.description">Lorcamersfoort is een onafhankelijke Disney Lorcana community.</p>
+                    <p class="copyright" data-i18n="footer.copyright">2026 Lorcamersfoort. Disney Lorcana is een handelsmerk van Disney.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://tcg.ravensburgerplay.com" target="_blank">Ravensburger Play Hub</a>
+                    <a href="https://www.disneylorcana.com" target="_blank">Disney Lorcana</a>
+                    <a href="https://brand.ravensburger-group.com/d/e1vhRSQ7WeNy/downloads#/set-assets/winterspell" target="_blank">Winterspell Assets</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/countdown.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Mobile Navigation Toggle for reveals page
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    
+                    const spans = navToggle.querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (navMenu.classList.contains('active')) {
+                            if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                            if (index === 1) span.style.opacity = '0';
+                            if (index === 2) span.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                        } else {
+                            span.style.transform = '';
+                            span.style.opacity = '';
+                        }
+                    });
+                });
+            }
+
+            // Language toggle integration
+            const langToggle = document.getElementById('langToggle');
+            if (langToggle) {
+                langToggle.querySelectorAll('.lang-option').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const lang = this.dataset.lang;
+                        langToggle.querySelectorAll('.lang-option').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        localStorage.setItem('lorcamersfoort-lang', lang);
+                        
+                        // Update countdown language
+                        if (typeof setCountdownLanguage === 'function') {
+                            setCountdownLanguage(lang);
+                        }
+                    });
+                });
+
+                // Set initial language from storage
+                const savedLang = localStorage.getItem('lorcamersfoort-lang') || 'nl';
+                langToggle.querySelectorAll('.lang-option').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === savedLang);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
