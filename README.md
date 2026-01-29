@@ -21,38 +21,6 @@ Lorcamersfoort is een community van Disney Lorcana spelers die elke donderdagavo
 - Scherbierstraat 4, 3811 JP Amersfoort
 
 ---
-
-## 🚀 Hosting Setup (GitHub Pages)
-
-### Stap 1: Repository aanmaken
-1. Ga naar https://github.com/new
-2. Naam: `lorcamersfoort`
-3. Kies **Public**
-4. Klik **Create repository**
-
-### Stap 2: Code pushen
-```bash
-cd C:\Users\User_\lorcamersfoort
-git init
-git add .
-git commit -m "Initial commit: Lorcamersfoort website"
-git branch -M main
-git remote add origin https://github.com/[jouw-username]/lorcamersfoort.git
-git push -u origin main
-```
-
-### Stap 3: GitHub Pages inschakelen
-1. Ga naar repository **Settings** → **Pages**
-2. Source: **GitHub Actions**
-3. De website is live op: `https://[jouw-username].github.io/lorcamersfoort/website/`
-
-### Stap 4: Actions activeren
-1. Ga naar **Actions** tab
-2. Klik op **I understand my workflows, go ahead and enable them**
-3. Events worden nu dagelijks om 07:00 (NL tijd) automatisch bijgewerkt
-
----
-
 ## 📁 Project Structuur
 
 ```
