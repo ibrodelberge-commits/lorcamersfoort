@@ -2,7 +2,7 @@
 
 Community website voor Disney Lorcana spelers in Amersfoort, Nederland.
 
-🌐 **Live website**: https://[jouw-username].github.io/lorcamersfoort/website/
+🌐 **Live website**: (https://ibrodelberge-commits.github.io/lorcamersfoort/index.html)
 
 ---
 
